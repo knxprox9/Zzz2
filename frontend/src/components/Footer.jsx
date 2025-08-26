@@ -219,7 +219,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col items-center justify-center gap-4">
             <p className="text-gray-400 text-center md:text-right">
               © {currentYear} الأسطورة أونلاين. جميع الحقوق محفوظة.
             </p>
