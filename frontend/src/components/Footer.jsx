@@ -119,10 +119,15 @@ const Footer = () => {
               </p>
 
               <div className="space-y-3 justify-center items-center inline-flex flex-col">
-                <div className="flex items-center gap-3">
+                <a
+                  href="tel:+967779995884"
+                  aria-label="اتصال على +967 77 999 5884"
+                  className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors"
+                  onClick={(e) => { if (window.innerWidth >= 768) { e.preventDefault(); } }}
+                >
                   <Phone className="w-5 h-5 text-yellow-500" />
-                  <span className="text-gray-300" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>77 999 5884</span>
-                </div>
+                  <span dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>77 999 5884</span>
+                </a>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-yellow-500" />
                   <span className="text-gray-300">info@legend-online.com</span>
