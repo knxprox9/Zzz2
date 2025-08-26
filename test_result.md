@@ -101,3 +101,61 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Verify that all country/city mentions have been updated from Saudi phrases to Yemen - Hadramout - Al-Wadia in footer and contact page"
+
+frontend:
+  - task: "Update Footer Address from Saudi to Yemen Location"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        -working: false
+        -agent: "testing"
+        -comment: "CRITICAL ISSUE: Footer still shows 'الرياض، المملكة العربية السعودية' (Riyadh, Saudi Arabia) instead of expected 'اليمن - حضرموت - الوديعة' (Yemen - Hadramout - Al-Wadia). Line 132 in Footer.jsx needs to be updated."
+
+  - task: "Update Footer Bottom Bar from Saudi to Yemen Location"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        -working: false
+        -agent: "testing"
+        -comment: "CRITICAL ISSUE: Bottom bar still shows Saudi reference instead of expected 'صُنع بـ ❤️ في اليمن - حضرموت - الوديعة' (Made with ❤️ in Yemen - Hadramout - Al-Wadia). Line 227 in Footer.jsx needs to be updated."
+
+  - task: "Update Contact Page Visit Us Card from Saudi to Yemen Location"
+    implemented: false
+    working: false
+    file: "/app/frontend/src/pages/ContactPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        -working: false
+        -agent: "testing"
+        -comment: "CRITICAL ISSUE: Contact page Visit Us card still shows Saudi location instead of expected Yemen details ['اليمن - حضرموت - الوديعة', 'اليمن']. Line 69 in ContactPage.jsx needs to be updated."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Update Footer Address from Saudi to Yemen Location"
+    - "Update Footer Bottom Bar from Saudi to Yemen Location"
+    - "Update Contact Page Visit Us Card from Saudi to Yemen Location"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    -agent: "testing"
+    -message: "URGENT: All three location update requirements FAILED testing. The application still shows Saudi Arabia references instead of Yemen locations. Screenshots captured showing: 1) Footer shows 'الرياض، المملكة العربية السعودية' instead of 'اليمن - حضرموت - الوديعة', 2) Bottom bar shows Saudi reference instead of Yemen, 3) Contact page missing Yemen location details. All changes need to be implemented in Footer.jsx and ContactPage.jsx files."
