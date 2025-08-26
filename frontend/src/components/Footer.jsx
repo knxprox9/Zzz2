@@ -118,7 +118,7 @@ const Footer = () => {
                 نقدم خدمات آمنة وسريعة على مدار الساعة لجميع عملائنا الكرام.
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-3 justify-center items-center inline-flex flex-col">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-yellow-500" />
                   <span className="text-gray-300" dir="ltr" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>77 999 5884</span>
