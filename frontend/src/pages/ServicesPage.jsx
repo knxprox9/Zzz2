@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Smartphone, 
-  Palette, 
-  Code, 
-  Globe, 
-  Shield, 
+import {
+  CreditCard,
+  Gamepad2,
+  Download,
+  Wallet,
+  Shield,
   Users,
   ArrowLeft,
-  CheckCircle,
-  Star
+  CheckCircle
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -17,111 +16,97 @@ import Footer from '../components/Footer';
 const ServicesPage = () => {
   const services = [
     {
-      icon: Smartphone,
-      title: 'تطوير التطبيقات الذكية',
-      description: 'نطور تطبيقات متقدمة لأنظمة iOS و Android بأحدث التقنيات والمعايير العالمية لضمان أداء متميز وتجربة مستخدم استثنائية.',
+      icon: CreditCard,
+      title: 'بطاقات الدفع المسبق',
+      description: 'بطاقات المتاجر والمنصات العالمية مع تسليم فوري للأكواد وأسعار تنافسية.',
       features: [
-        'تطبيقات أصلية (Native Apps)',
-        'تطبيقات هجينة (Hybrid Apps)', 
-        'واجهات متجاوبة وسهلة الاستخدام',
-        'تحسين الأداء والسرعة',
-        'اختبارات شاملة',
-        'نشر على المتاجر الرسمية'
+        'بطاقات متجر Google Play / App Store / PlayStation / Xbox',
+        'تسليم فوري وآمن للأكواد',
+        'أسعار منافسة وعروض مستمرة',
+        'دعم فني على مدار الساعة'
       ],
-      price: 'تبدأ من 15,000 ريال',
-      duration: '3-6 أشهر'
+      price: 'حسب المزود',
+      duration: 'تسليم فوري'
     },
     {
-      icon: Globe,
-      title: 'تطوير المواقع الإلكترونية',
-      description: 'نصمم ونطور مواقع إلكترونية حديثة ومتجاوبة تعكس هوية شركتك وتحقق أهدافك التجارية بأحدث التقنيات.',
+      icon: Gamepad2,
+      title: 'شحن الألعاب والعملات',
+      description: 'شحن سريع وآمن لجميع الألعاب والعملات داخل الألعاب مع توثيق للعمليات.',
       features: [
-        'مواقع متجاوبة (Responsive)',
-        'تحسين محركات البحث (SEO)',
-        'أمان عالي وحماية البيانات',
-        'سرعة تحميل فائقة',
-        'إدارة المحتوى بسهولة',
-        'تكامل مع وسائل التواصل'
+        'دعم أشهر الألعاب والمنصات',
+        'شحن عملات رقمية داخل الألعاب',
+        'تنفيذ خلال دقائق',
+        'إشعارات حالة الطلب'
       ],
-      price: 'تبدأ من 8,000 ريال',
-      duration: '2-4 أشهر'
+      price: 'حسب اللعبة',
+      duration: 'دقائق'
     },
     {
-      icon: Palette,
-      title: 'التصميم والواجهات',
-      description: 'تصاميم عصرية وجذابة تضمن تجربة مستخدم استثنائية ومتميزة مع الاهتمام بكل التفاصيل البصرية.',
+      icon: Download,
+      title: 'الاشتراكات الرقمية والبرامج',
+      description: 'توفير اشتراكات المنصات والبرامج (Netflix, Spotify, Microsoft 365, Adobe, VPN) بأسعار تنافسية.',
       features: [
-        'تصميم واجهات المستخدم (UI)',
-        'تصميم تجربة المستخدم (UX)',
-        'هوية بصرية متكاملة',
-        'نماذج أولية تفاعلية',
-        'دليل الهوية البصرية',
-        'تصميم مطبوعات ومواد تسويقية'
+        'تفعيل فوري للبرامج والخدمات',
+        'صلاحيات موثوقة ومضمونة',
+        'تجديدات مرنة',
+        'دعم متعدد المناطق'
       ],
-      price: 'تبدأ من 5,000 ريال',
-      duration: '2-3 أشهر'
+      price: 'حسب الخدمة',
+      duration: 'فوري'
     },
     {
-      icon: Code,
-      title: 'الحلول التقنية المتكاملة',
-      description: 'حلول تقنية شاملة من التطوير إلى النشر والصيانة مع الدعم المستمر لضمان استمرارية العمل.',
+      icon: Wallet,
+      title: 'المحافظ الرقمية والعملات',
+      description: 'شحن محافظك الرقمية وتحويلات آمنة مع دعم لعدة عملات ومنصات.',
       features: [
-        'أنظمة إدارة المحتوى',
-        'أنظمة إدارة العملاء (CRM)',
-        'أنظمة نقاط البيع (POS)',
-        'تكامل مع الأنظمة الخارجية',
-        'حلول الدفع الإلكتروني',
-        'أنظمة إدارة المخزون'
+        'شحن محافظ رقمية متعددة',
+        'تحويلات موثوقة',
+        'دعم عملات متعددة',
+        'سجل عمليات مفصل'
       ],
-      price: 'تبدأ من 25,000 ريال',
-      duration: '4-8 أشهر'
+      price: 'حسب المنصة',
+      duration: 'دقائق'
     },
     {
       icon: Shield,
-      title: 'الأمان والحماية',
-      description: 'خدمات أمان شاملة لحماية تطبيقاتك ومواقعك من التهديدات السيبرانية وضمان أمان البيانات.',
+      title: 'أمان المدفوعات',
+      description: 'حماية متقدمة للمعاملات مع مراقبة فورية وتقنيات تشفير حديثة.',
       features: [
-        'تقييم أمني شامل',
-        'اختبارات الاختراق',
-        'تشفير البيانات',
-        'مراقبة الأمان المستمرة',
-        'نسخ احتياطية آمنة',
-        'خطط الطوارئ والاستعادة'
+        'تشفير وحماية للبيانات',
+        'مراقبة مستمرة للمعاملات',
+        'تنبيهات ومراجعات أمان',
+        'نسخ احتياطية مستمرة'
       ],
-      price: 'تبدأ من 10,000 ريال',
-      duration: '1-2 شهر'
+      price: '—',
+      duration: '—'
     },
     {
       icon: Users,
-      title: 'الاستشارات التقنية',
-      description: 'استشارات تقنية متخصصة لمساعدتك في اتخاذ القرارات الصحيحة وتحديد أفضل الحلول التقنية لمشروعك.',
+      title: 'شراكات ووكلاء',
+      description: 'برامج شراكة مرنة للوكلاء مع نسب تفضيلية ودعم فني.',
       features: [
-        'تحليل المتطلبات التقنية',
-        'دراسة الجدوى التقنية',
-        'اختيار التقنيات المناسبة',
-        'تخطيط البنية التحتية',
-        'إستراتيجية التطوير',
-        'مراجعة وتحسين الأنظمة'
+        'خصومات للوكلاء',
+        'لوحة متابعة للطلبات',
+        'دعم فني سريع',
+        'تسويات وتقارير شهرية'
       ],
-      price: 'تبدأ من 2,000 ريال',
-      duration: '1-4 أسابيع'
+      price: 'حسب الفئة',
+      duration: 'مستمر'
     }
   ];
 
   return (
     <div className="min-h-screen">
       <Header />
-      
       {/* Hero Section */}
       <section className="py-20" style={{backgroundColor: '#FAF8F5'}}>
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              خدماتنا <span className="text-yellow-600">المتميزة</span>
+              خدمات <span className="text-yellow-600">الدفع الإلكتروني</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              نقدم مجموعة شاملة من الخدمات التقنية المتطورة لتلبية جميع احتياجاتك الرقمية 
-              بأعلى معايير الجودة والاحترافية
+              حلول متكاملة لشحن الرصيد والألعاب والبرامج والبطاقات الإلكترونية بسرعة وأمان
             </p>
           </div>
         </div>
@@ -140,11 +125,9 @@ const ServicesPage = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                    
                     <div className="space-y-3 mb-6">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-3">
@@ -153,7 +136,6 @@ const ServicesPage = () => {
                         </div>
                       ))}
                     </div>
-                    
                     <div className="flex items-center justify-between pt-6 border-t border-gray-100">
                       <div>
                         <div className="text-sm text-gray-500">السعر</div>
@@ -172,59 +154,13 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">كيف نعمل</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              منهجية عمل متقنة ومجربة تضمن تسليم مشروعك في الوقت المحدد بأعلى جودة
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'التشاور والتحليل',
-                description: 'نستمع لمتطلباتك ونحلل احتياجات مشروعك بدقة'
-              },
-              {
-                step: '02', 
-                title: 'التخطيط والتصميم',
-                description: 'نضع خطة مفصلة ونصمم النماذج الأولية'
-              },
-              {
-                step: '03',
-                title: 'التطوير والبناء',
-                description: 'نطور المشروع باستخدام أحدث التقنيات'
-              },
-              {
-                step: '04',
-                title: 'الاختبار والتسليم', 
-                description: 'نختبر بدقة ونسلم المشروع جاهزاً للعمل'
-              }
-            ].map((process, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">{process.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{process.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{process.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 text-white" style={{background: 'linear-gradient(to right, #D6B661, #E8A317)'}}>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">جاهز لبدء مشروعك؟</h2>
+          <h2 className="text-4xl font-bold mb-6">جاهز للبدء؟</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            تواصل معنا اليوم واحصل على استشارة مجانية لتحديد أفضل الحلول لمشروعك
+            تواصل معنا الآن للحصول على أفضل العروض لشحن الألعاب والبطاقات والاشتراكات الرقمية
           </p>
-          
           <Link
             to="/contact"
             className="bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
