@@ -10,15 +10,17 @@ root.render(
   </React.StrictMode>,
 );
 
-// تسجيل Service Worker للتخزين المؤقت
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+// إلغاء تسجيل أي Service Worker قديم ومسح الكاش لضمان تحديثات فورية أثناء المعاينة
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('Service Worker مسجل بنجاح:', registration.scope);
-      })
-      .catch((error) => {
-        console.log('فشل تسجيل Service Worker:', error);
-      });
+    // إلغاء أي SW سابق
+    navigator.serviceWorker.getRegistrations().then((regs) => {
+      regs.forEach((reg) => reg.unregister());
+    });
+    // مسح جميع مخابئ الكاش
+    if (window.caches && caches.keys) {
+      caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
+    }
   });
 }
+
