@@ -224,7 +224,7 @@ const Footer = () => {
               © {currentYear} الأسطورة أونلاين. جميع الحقوق محفوظة.
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-400">
-              <span>صُنع بـ ❤️ في المملكة العربية السعودية</span>
+              <span>صُنع بـ ❤️ في اليمن - حضرموت - الوديعة</span>
             </div>
           </div>
         </div>
