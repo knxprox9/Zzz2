@@ -123,7 +123,14 @@ const ContactPage = () => {
                 
                 <div className="space-y-1 mb-3">
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-700 font-medium">{detail}</p>
+                    <p
+                      key={idx}
+                      className="text-gray-700 font-medium"
+                      dir={info.title === 'اتصل بنا' ? 'ltr' : undefined}
+                      style={info.title === 'اتصل بنا' ? { direction: 'ltr', unicodeBidi: 'embed' } : undefined}
+                    >
+                      {detail}
+                    </p>
                   ))}
                 </div>
                 
